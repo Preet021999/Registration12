@@ -147,7 +147,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void validation() {
         /** Database connection **/
-     /**   String uname = UserName.getText().toString();
+     /**String uname = UserName.getText().toString();
         String phone = PhoneNumber.getText().toString();
         String address = Address.getText().toString();
         String email = Email.getText().toString();
