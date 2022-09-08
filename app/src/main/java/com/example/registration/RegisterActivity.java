@@ -8,7 +8,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -38,7 +37,6 @@ public class RegisterActivity extends AppCompatActivity {
     Button btn_driver;
     Button btn_reg;
     AlertDialog.Builder builder;
-    private static final String TAG = "MainActivity";
 
     String uname,phone,address,email,pass,c_pass;
 
@@ -57,6 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
        Email = findViewById(R.id.inputEmail);
 
         db = FirebaseFirestore.getInstance();
+
        Password = findViewById(R.id.inputPassword);
        C_Password = findViewById(R.id.inputConformPassword);
 
@@ -147,7 +146,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     private void validation() {
-
+        /** Database connection **/
      String uname = UserName.getText().toString();
         String phone = PhoneNumber.getText().toString();
         String address = Address.getText().toString();
@@ -186,7 +185,7 @@ public class RegisterActivity extends AppCompatActivity {
             user.put("Address",address);
             user.put("Email",email);
             user.put("Password",pass);
-
+           // user.put("Confirm Password",c_pass);
             db.collection("user")
                     .add(user)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -198,7 +197,6 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             Toast.makeText(RegisterActivity.this, "Failed", Toast.LENGTH_SHORT).show();
-                            Log.w(TAG, "Error adding document", e);
                         }
                     });
             startActivity(new Intent(RegisterActivity.this,test.class));
