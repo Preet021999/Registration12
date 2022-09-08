@@ -47,13 +47,13 @@ public class RegisterActivity2 extends AppCompatActivity {
 
         //--------------------------Add Document-----------------
 
-        dialog = new Dialog(this);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                document();
-            }
-        });
+//        dialog = new Dialog(this);
+//        add.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                document();
+//            }
+//        });
 
 
 
@@ -70,7 +70,7 @@ public class RegisterActivity2 extends AppCompatActivity {
             public void onClick(View view) {
 
                 validation();
-                Toast.makeText(RegisterActivity2.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(RegisterActivity2.this, "Registration Successful", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -131,23 +131,23 @@ public class RegisterActivity2 extends AppCompatActivity {
 
     }
 
-    private void document() {
-        dialog.setContentView(R.layout.documents);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.blue(5)));
-
-        Button submit = dialog.findViewById(R.id.submit);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
-                Toast.makeText(RegisterActivity2.this, "Data Submited", Toast.LENGTH_SHORT).show();
-            }
-        });
-        dialog.show();
-
-
-
-    }
+//    private void document() {
+//        dialog.setContentView(R.layout.documents);
+//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.blue(5)));
+//
+//        Button submit = dialog.findViewById(R.id.submit);
+//        submit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                dialog.dismiss();
+//                Toast.makeText(RegisterActivity2.this, "Data Submited", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//        dialog.show();
+//
+//
+//
+//    }
 
     private void validation() {
         uname = UserName.getText().toString();
@@ -179,7 +179,13 @@ public class RegisterActivity2 extends AppCompatActivity {
             C_Password.requestFocus();
         }
         else {
-            startActivity(new Intent(RegisterActivity2.this,LoginActivity.class));
+            Intent intent=new Intent(RegisterActivity2.this,Driver_details.class);
+            intent.putExtra("uname",uname);
+            intent.putExtra("phone",phone);
+            intent.putExtra("email",email);
+            intent.putExtra("pass",pass);
+            startActivity(intent);
+            //startActivity(new Intent(RegisterActivity2.this,LoginActivity.class));
         }
     }
 }

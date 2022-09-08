@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Driver_details"
+            android:exported="false" />
+        <activity
             android:name=".bill"
             android:exported="false" />
         <activity
