@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -31,12 +32,13 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     EditText UserName,PhoneNumber,Address,Email,Password,C_Password;
-    /**change 1
-    // FirebaseFirestore db;**/
+
+    FirebaseFirestore db;
     TextView back;
     Button btn_driver;
     Button btn_reg;
     AlertDialog.Builder builder;
+    private static final String TAG = "MainActivity";
 
     String uname,phone,address,email,pass,c_pass;
 
@@ -53,9 +55,8 @@ public class RegisterActivity extends AppCompatActivity {
        PhoneNumber = findViewById(R.id.inputPhone);
        Address = findViewById(R.id.inputAddress);
        Email = findViewById(R.id.inputEmail);
-        /** connectivity
+
         db = FirebaseFirestore.getInstance();
-         **/
        Password = findViewById(R.id.inputPassword);
        C_Password = findViewById(R.id.inputConformPassword);
 
@@ -146,33 +147,14 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     private void validation() {
-        /** Database connection **/
-     /**String uname = UserName.getText().toString();
+
+     String uname = UserName.getText().toString();
         String phone = PhoneNumber.getText().toString();
         String address = Address.getText().toString();
         String email = Email.getText().toString();
         String pass = Password.getText().toString();
         String c_pass= C_Password.getText().toString();
-        Map<String,Object> user = new HashMap<>();
-        user.put("Name",uname);
-        user.put("Phone Number",phone);
-        user.put("Address",address);
-        user.put("Email",email);
-        user.put("Password",pass);
-        user.put("Confirm Password",c_pass);
-        db.collection("user")
-                .add(user)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Toast.makeText(RegisterActivity.this, "Successfull", Toast.LENGTH_SHORT).show();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(RegisterActivity.this, "Failed", Toast.LENGTH_SHORT).show();
-                    }
-                });**/
+
         if (uname.isEmpty()){
             UserName.setError("Please Fill this Filed");
             UserName.requestFocus();
@@ -198,6 +180,27 @@ public class RegisterActivity extends AppCompatActivity {
             C_Password.requestFocus();
         }
         else {
+            Map<String,Object> user = new HashMap<>();
+            user.put("Name",uname);
+            user.put("Phone Number",phone);
+            user.put("Address",address);
+            user.put("Email",email);
+            user.put("Password",pass);
+
+            db.collection("user")
+                    .add(user)
+                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                        @Override
+                        public void onSuccess(DocumentReference documentReference) {
+                            Toast.makeText(RegisterActivity.this, "Successfull", Toast.LENGTH_SHORT).show();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(RegisterActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                            Log.w(TAG, "Error adding document", e);
+                        }
+                    });
             startActivity(new Intent(RegisterActivity.this,test.class));
         }
     }
