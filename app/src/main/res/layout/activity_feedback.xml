@@ -54,6 +54,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/txt_back"
         android:hint="Enter Your Feedback"
+        android:textColorHint="@color/colorBlack"
         android:padding="12dp"
         android:lines="6" />
 
