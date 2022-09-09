@@ -41,7 +41,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/edtName"
+        android:id="@+id/edtname"
         android:layout_width="300dp"
         android:layout_height="38dp"
         android:layout_marginTop="20dp"
@@ -131,7 +131,7 @@
         app:layout_constraintVertical_bias="0.632" />
 
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/btnsub"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginStart="80dp"

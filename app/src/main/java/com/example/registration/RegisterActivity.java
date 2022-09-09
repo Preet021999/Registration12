@@ -199,7 +199,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                         }
                     });
-            startActivity(new Intent(RegisterActivity.this,test.class));
+            startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
         }
     }
 }
