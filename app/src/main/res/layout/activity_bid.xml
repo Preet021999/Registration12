@@ -8,13 +8,13 @@
     android:background="@drawable/bb">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="370dp"
-        android:layout_height="750dp"
+        android:layout_width="364dp"
+        android:layout_height="716dp"
+        android:background="@drawable/input_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/input_bg">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView4"
@@ -75,9 +75,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="10000 ₹"
+            android:textColor="#f09819"
             android:textSize="30dp"
             android:textStyle="bold"
-            android:textColor="#f09819"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textView6"
             app:layout_constraintHorizontal_bias="0.539"
