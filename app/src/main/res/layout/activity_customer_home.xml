@@ -22,7 +22,7 @@
         android:id="@+id/btnest"
         android:layout_width="387dp"
         android:layout_height="61dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/txt_back"
         android:text="Estimate Cost" />
 
@@ -41,6 +41,14 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/txt_back"
         android:text="Payment"/>
+
+    <Button
+        android:id="@+id/btnfeed"
+        android:layout_width="387dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="50dp"
+        android:text="Feedback"
+        android:background="@drawable/txt_back"/>
 
     <Button
         android:id="@+id/btnlogout"

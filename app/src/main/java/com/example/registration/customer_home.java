@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class customer_home extends AppCompatActivity {
-    Button btnop,btnest,btnlogout,btnbill;
+    Button btnop,btnest,btnlogout,btnbill,btnfeed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,14 @@ public class customer_home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(customer_home.this,bill.class));
+                finish();
+            }
+        });
+        btnfeed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(customer_home.this,feedback.class));
+                finish();
             }
         });
     }
