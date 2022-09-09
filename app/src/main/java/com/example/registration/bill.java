@@ -45,6 +45,7 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
         setContentView(R.layout.activity_bill);
         getuserDocs();
         getdriverDocs();
+
         db = FirebaseFirestore.getInstance();
          database = FirebaseDatabase.getInstance();
          myRef = database.getReference("bid");
@@ -155,6 +156,30 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                         }
                     }
                 });
+
+        public void getorderDocs(){
+            db.collection("order")
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                    Log.d(TAG, document.getId() + " => " + document.getData());
+                                    dri_name.add(document.getString("Name"));
+//                                dri_pass.add(document.getString("Password"));
+                                    System.out.println(dri_name);
+//                                System.out.println(dri_pass);
+//                                for (int i=0;i<cus_email.size();i++){
+//                                    System.out.println(cus_email.get(i));
+//                                }
+
+                                }
+                            } else {
+                                Log.d(TAG, "Error getting documents: ", task.getException());
+                            }
+                        }
+                    });
 
     }
 }
