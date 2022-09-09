@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".order_page"
+            android:exported="false" />
+        <activity
+            android:name=".feedback"
+            android:exported="false" />
+        <activity
             android:name=".Driver_details"
             android:exported="false" />
         <activity
