@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -21,13 +22,15 @@ import org.json.JSONObject;
 
 public class bill extends AppCompatActivity implements PaymentResultListener {
     Button billpay;
-    String sAmount;
+    TextView txtprice;
+   private  String fAmount;
     private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
         billpay = findViewById(R.id.btpay);
+        txtprice=findViewById(R.id.txtprice);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("bid");
 //        String sAmount = "100000";
@@ -36,8 +39,9 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                sAmount = dataSnapshot.getValue(String.class);
+                String sAmount = dataSnapshot.getValue(String.class);
                 Log.d(TAG, "Value is: " + sAmount);
+                fAmount=sAmount;
             }
 
             @Override
@@ -46,8 +50,9 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+        System.out.println(fAmount);
 
-        int amount = Math.round(Float.parseFloat(sAmount) * 100);
+        int amount = Math.round(Float.parseFloat(fAmount) * 100);
         billpay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
