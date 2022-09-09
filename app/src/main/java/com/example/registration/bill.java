@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 public class bill extends AppCompatActivity implements PaymentResultListener {
     Button billpay;
-    TextView txtprice;
+    TextView txtprice,txtname;
    private int fAmount;
     String sAmount;
     FirebaseDatabase database;
@@ -51,6 +51,7 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
          myRef = database.getReference("bid");
         billpay = findViewById(R.id.btpay);
         txtprice=findViewById(R.id.txtprice);
+        txtname=findViewById(R.id.txtname);
 
 //        String sAmount = "100000";
         myRef.addValueEventListener(new ValueEventListener() {
@@ -124,7 +125,7 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
 //                         for (int i=0;i<cus_email.size();i++){
 //                             System.out.println(cus_email.get(i));
 //                         }
-
+                            txtname.setText(cus_name.get(0));
                             }
                         } else {
                             Log.d(TAG, "Error getting documents: ", task.getException());
@@ -133,7 +134,7 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                 });
 
     }
-    public void getdriverDocs(){
+    public void getdriverDocs() {
         db.collection("driver")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -156,7 +157,7 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                         }
                     }
                 });
-
+    }
         public void getorderDocs(){
             db.collection("order")
                     .get()

@@ -114,30 +114,16 @@
         app:layout_constraintTop_toTopOf="@id/textView9" />
 
     <Button
-        android:id="@+id/next"
-        android:layout_width="190dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="556dp"
-        android:background="@drawable/txt_back"
-        android:text="Next"
-
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/textView9" />
-
-    <Button
         android:id="@+id/accept"
         android:layout_width="190dp"
         android:layout_height="61dp"
-        android:layout_marginTop="556dp"
+        android:layout_marginTop="524dp"
         android:background="@drawable/txt_back"
         android:text="Accept"
 
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/textView9" />
 

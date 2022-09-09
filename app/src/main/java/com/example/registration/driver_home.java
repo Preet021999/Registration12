@@ -24,8 +24,8 @@ import java.util.ArrayList;
 public class driver_home extends AppCompatActivity {
 
     TextView dest,height,width,del_price,name;
-    Button btnLogout,next,accept;
-    private int index=0;
+    Button btnLogout,accept;
+
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
@@ -65,7 +65,7 @@ public class driver_home extends AppCompatActivity {
 
 
        btnLogout=findViewById(R.id.BtnDriver_logout);
-       next=findViewById(R.id.next);
+
        accept=findViewById(R.id.accept);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,28 +107,18 @@ public class driver_home extends AppCompatActivity {
                                 System.out.println(obj_width);
                                 System.out.println(obj_price);
                                 System.out.println(obj_name);
-                                dest.setText("Destination: "+destination.get(index));
-                                height.setText("Height: "+obj_height.get(index));
-                                name.setText("Name: "+obj_name.get(index));
-                                del_price.setText("Price: "+obj_price.get(index));
-                                width.setText("Width: "+obj_width.get(index));
-                                next.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                       index+=1;
-                                        dest.setText("Destination: "+destination.get(index));
-                                        height.setText("Height: "+obj_height.get(index));
-                                        name.setText("Name: "+obj_name.get(index));
-                                        del_price.setText("Price: "+obj_price.get(index));
-                                        width.setText("Width: "+obj_width.get(index));
-                                    }
-                                });
+                                dest.setText("Destination: "+destination.get(0));
+                                height.setText("Height: "+obj_height.get(0));
+                                name.setText("Name: "+obj_name.get(0));
+                                del_price.setText("Price: "+obj_price.get(0));
+                                width.setText("Width: "+obj_width.get(0));
+
                                 accept.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         Intent intent=new Intent(driver_home.this,bid.class);
-                                        intent.putExtra("name",obj_name.get(index));
-                                        intent.putExtra("price",obj_price.get(index));
+                                        intent.putExtra("name",obj_name.get(0));
+                                        intent.putExtra("price",obj_price.get(0));
                                         startActivity(intent);
                                     }
                                 });
