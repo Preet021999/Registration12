@@ -3,20 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_bid.xml" value="0.25416666666666665" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_bill.xml" value="0.2" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_customer_home.xml" value="0.25416666666666665" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_driver_details.xml" value="0.22826086956521738" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_driver_home.xml" value="0.25416666666666665" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_estimatecost.xml" value="0.25416666666666665" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_feedback.xml" value="0.25416666666666665" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_order_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_register.xml" value="0.22826086956521738" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_register2.xml" value="0.22826086956521738" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/activity_test.xml" value="0.25416666666666665" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/customer_r.xml" value="0.25416666666666665" />
-        <entry key="..\:/Registration/Registration/app/src/main/res/layout/documents.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Darpan/Downloads/Registration/Registration/app/src/main/res/drawable/btn_bg.xml" value="0.269" />
         <entry key="..\:/Users/Darpan/Downloads/Registration/Registration/app/src/main/res/drawable/documents.xml" value="0.261" />
         <entry key="..\:/Users/Darpan/Downloads/Registration/Registration/app/src/main/res/drawable/ic_person.xml" value="0.261" />
@@ -40,6 +27,17 @@
         <entry key="..\:/Users/Darpan/Downloads/Registration/Registration/app/src/main/res/layout/customer_tab_frag.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Darpan/Downloads/Registration/Registration/app/src/main/res/layout/driver_tab_frag.xml" value="0.2" />
         <entry key="..\:/Users/Darpan/Downloads/Registration/Registration/app/src/main/res/layout/login_tab_frag.xml" value="0.2734375" />
+        <entry key="..\:/Users/devil/AndroidStudioProjects/Registration12/app/src/main/res/layout/activity_bid.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/devil/AndroidStudioProjects/Registration12/app/src/main/res/layout/activity_bill.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/devil/AndroidStudioProjects/Registration12/app/src/main/res/layout/activity_driver_details.xml" value="0.2604166666666667" />
+        <entry key="..\:/Users/devil/AndroidStudioProjects/Registration12/app/src/main/res/layout/activity_driver_home.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/devil/AndroidStudioProjects/Registration12/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/devil/AndroidStudioProjects/Registration12/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/devil/AndroidStudioProjects/Registration12/app/src/main/res/layout/activity_order_page.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/devil/AndroidStudioProjects/Registration12/app/src/main/res/layout/activity_register.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/devil/AndroidStudioProjects/Registration12/app/src/main/res/layout/activity_register2.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/devil/AndroidStudioProjects/Registration12/app/src/main/res/layout/activity_test.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/devil/AndroidStudioProjects/Registration12/app/src/main/res/layout/documents.xml" value="0.27447916666666666" />
         <entry key="..\:/project/Registration/Registration/app/src/main/res/layout/activity_bid.xml" value="0.1" />
         <entry key="..\:/project/Registration/Registration/app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="..\:/project/Registration/Registration/app/src/main/res/layout/activity_register2.xml" value="0.1" />
