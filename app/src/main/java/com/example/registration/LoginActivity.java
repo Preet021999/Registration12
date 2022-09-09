@@ -58,9 +58,9 @@ public class LoginActivity extends AppCompatActivity {
         sharedPreferences = this.getSharedPreferences("login",MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
-        if(sharedPreferences.getString("isLogin","false").equals("true")){
-            openDash();
-        }
+//        if(sharedPreferences.getString("isLogin","false").equals("true")){
+//            openDash();
+//        }
 
         TextView rPage=findViewById(R.id.textViewSignUp);
          uname=findViewById(R.id.inputEmail);

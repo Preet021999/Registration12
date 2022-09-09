@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,35 +7,142 @@
     tools:context=".driver_home"
     android:orientation="vertical"
     >
-     <TextView
-       android:layout_width="match_parent"
-       android:layout_height="130dp"
-       android:text="HOME PAGE"
-       android:textColor="@color/colorWhite"
-       android:textSize="35dp"
-       android:paddingTop="45dp"
-       android:textAlignment="center"
-       android:background="@drawable/bb"/>
 
-    <Spinner
-        android:id="@+id/spinner"
+    <TextView
+        android:id="@+id/textView9"
         android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:layout_margin="20dp"
-        >
+        android:layout_height="130dp"
+        android:background="@drawable/bb"
+        android:paddingTop="45dp"
+        android:text="HOME PAGE"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="30dp"
+        android:id="@+id/dest"
+        android:text="Destination"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/txt_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.0"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="30dp"
+        android:id="@+id/width"
+        android:text="Width"
+        android:background="@drawable/txt_back"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/del_price"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="30dp"
+        android:id="@+id/del_price"
+        android:text="Price"
+        android:gravity="center"
+        android:background="@drawable/txt_back"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:text="Height"
+        android:background="@drawable/txt_back"
+        android:id="@+id/height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dest"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="30dp"
+        android:id="@+id/name"
+        android:text="Name"
+        android:gravity="center"
+        android:background="@drawable/txt_back"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height"></TextView>
     <Button
         android:id="@+id/BtnDriver_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="387dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="640dp"
+        android:background="@drawable/txt_back"
         android:text="LogOut"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="400dp"/>
+
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView9" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="190dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="556dp"
+        android:background="@drawable/txt_back"
+        android:text="Next"
+
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView9" />
+
+    <Button
+        android:id="@+id/accept"
+        android:layout_width="190dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="556dp"
+        android:background="@drawable/txt_back"
+        android:text="Accept"
+
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView9" />
 
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

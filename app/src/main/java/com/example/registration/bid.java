@@ -35,7 +35,8 @@ public class bid extends AppCompatActivity {
         E_Amount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                C_bid.setText(Amount.getText()+"  $");
+                String amount=Amount.getText().toString();
+                C_bid.setText(amount+"  ₹");
             }
         });
     }

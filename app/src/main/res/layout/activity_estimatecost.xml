@@ -29,17 +29,17 @@
         android:hint="Enter Km Of Transport"
         android:padding="12dp"
         android:textSize="20dp"
-        android:textColorHint="@color/colorBlack"/>
+        android:textColorHint="#90000000"/>
 
-    <EditText
+    <TextView
         android:id="@+id/edtrps"
         android:layout_width="387dp"
         android:layout_height="61dp"
         android:background="@drawable/txt_back"
         android:layout_marginTop="20dp"
         android:padding="12dp"
-        android:textColorHint="@color/colorBlack"
-        android:hint="80.00 Rupees per KM"
+        android:gravity="center_horizontal|center_vertical "
+        android:text="80.00 Rupees per KM"
         android:textColor="@color/colorBlack"
         android:textSize="20dp"/>
 
@@ -51,12 +51,15 @@
         android:layout_marginTop="30dp"
         android:padding="12dp"
         android:text="Enter"
+        android:textColor="@color/colorWhite"
         android:textSize="20dp"/>
 
     <TextView
         android:id="@+id/txtdis"
         android:layout_width="387dp"
         android:layout_height="61dp"
+        android:textSize="20dp"
+        android:gravity="center"
         android:background="@drawable/txt_back"
         android:layout_marginTop="50dp"
         android:textColor="@color/colorBlack"
@@ -66,6 +69,7 @@
         android:layout_width="387dp"
         android:layout_height="61dp"
         android:id="@+id/btnback"
+        android:textColor="@color/colorWhite"
         android:background="@drawable/txt_back"
         android:layout_marginTop="50dp"
         android:text="Back to customer page"

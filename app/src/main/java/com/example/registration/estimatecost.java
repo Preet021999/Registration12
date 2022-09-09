@@ -10,8 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class estimatecost extends AppCompatActivity {
-    EditText edtkm,edtrps;
-    TextView txtdis;
+    EditText edtkm;
+    TextView txtdis,edtrps;
     Button btnprice,btnback;
 
     @Override
@@ -30,13 +30,11 @@ public class estimatecost extends AppCompatActivity {
                 if(edtkm.getText().toString().length()==0){
                     edtkm.setText("0");
                 }
-                if(edtrps.getText().toString().length()==0){
-                    edtrps.setText("0");
-                }
-                Float v1 = Float.valueOf(edtkm.getText().toString());
-                Float v2 = Float.valueOf(edtrps.getText().toString());
 
-                Float btnprice = v1*v2;
+                Float v1 = Float.valueOf(edtkm.getText().toString());
+//                Float v2 = Float.valueOf(edtrps.getText().toString());
+
+                Float btnprice = v1*80;
                 txtdis.setText(String.valueOf(btnprice));
             }
         });
