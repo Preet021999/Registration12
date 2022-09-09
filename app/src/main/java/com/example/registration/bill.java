@@ -30,14 +30,19 @@ import java.util.ArrayList;
 
 public class bill extends AppCompatActivity implements PaymentResultListener {
     Button billpay;
-    TextView txtprice,txtname;
+    TextView txtprice,txtname,txtpname,txtsource,txtdest,txtdname,txtdnum,txtemail;
    private int fAmount;
     String sAmount;
     FirebaseDatabase database;
     DatabaseReference myRef;
     FirebaseFirestore db;
     ArrayList<String> cus_name=new ArrayList<String>();
-    ArrayList<String>dri_name=new ArrayList<String>();
+    ArrayList<String> dri_name=new ArrayList<String>();
+    ArrayList<String> pro_name = new ArrayList<String>();
+    ArrayList<String> source = new ArrayList<String>();
+    ArrayList<String> dest = new ArrayList<String>();
+    ArrayList<String> dri_num = new ArrayList<String>();
+    ArrayList<String> dri_email = new ArrayList<String>();
     private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +50,7 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
         setContentView(R.layout.activity_bill);
         getuserDocs();
         getdriverDocs();
-
+        getorderDocs();
         db = FirebaseFirestore.getInstance();
          database = FirebaseDatabase.getInstance();
          myRef = database.getReference("bid");
@@ -119,6 +124,8 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Log.d(TAG, document.getId() + " => " + document.getData());
                                 cus_name.add(document.getString("Name"));
+                                source.add(document.getString("Address"));
+                                txtsource.setText(source.get(0));
                                 //cus_pass.add(document.getString("Password"));
 //                                System.out.println(cus_email);
 //                                System.out.println(cus_pass);
@@ -144,12 +151,17 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Log.d(TAG, document.getId() + " => " + document.getData());
                                 dri_name.add(document.getString("Name"));
+                                dri_num.add(document.getString("Phone Number"));
+                                dri_email.add(document.getString("Email"));
 //                                dri_pass.add(document.getString("Password"));
-                                System.out.println(dri_name);
+//                                System.out.println(dri_name);
 //                                System.out.println(dri_pass);
 //                                for (int i=0;i<cus_email.size();i++){
 //                                    System.out.println(cus_email.get(i));
 //                                }
+                                txtdname.setText(dri_name.get(0));
+                                txtdnum.setText(dri_num.get(0));
+                                txtemail.setText(dri_email.get(0));
 
                             }
                         } else {
@@ -167,9 +179,12 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                     Log.d(TAG, document.getId() + " => " + document.getData());
-                                    dri_name.add(document.getString("Name"));
+                                    pro_name.add(document.getString("Name"));
+                                    dest.add(document.getString("Destination"));
+                                    txtpname.setText(pro_name.get(0));
+                                    txtdest.setText(dest.get(0));
 //                                dri_pass.add(document.getString("Password"));
-                                    System.out.println(dri_name);
+//                                System.out.println(dri_name);
 //                                System.out.println(dri_pass);
 //                                for (int i=0;i<cus_email.size();i++){
 //                                    System.out.println(cus_email.get(i));
