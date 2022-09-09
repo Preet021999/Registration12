@@ -23,25 +23,30 @@ import org.json.JSONObject;
 public class bill extends AppCompatActivity implements PaymentResultListener {
     Button billpay;
     TextView txtprice;
-   private  String fAmount;
+   private int fAmount;
+    String sAmount;
+    FirebaseDatabase database;
+    DatabaseReference myRef;
     private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
+         database = FirebaseDatabase.getInstance();
+         myRef = database.getReference("bid");
         billpay = findViewById(R.id.btpay);
         txtprice=findViewById(R.id.txtprice);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("bid");
+
 //        String sAmount = "100000";
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                String sAmount = dataSnapshot.getValue(String.class);
+                sAmount = dataSnapshot.getValue(String.class);
                 Log.d(TAG, "Value is: " + sAmount);
-                fAmount=sAmount;
+                txtprice.setText(sAmount);
+                fAmount=Integer.parseInt(txtprice.getText().toString())*100;
             }
 
             @Override
@@ -52,7 +57,8 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
         });
         System.out.println(fAmount);
 
-        int amount = Math.round(Float.parseFloat(fAmount) * 100);
+
+//        int amount = Integer.parseInt(sAmount);
         billpay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,7 +71,7 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                     object.put("Description","Test Paymnet");
                     object.put("theme.color","0093DD");
                     object.put("Currency","INR");
-                    object.put("amount",amount);
+                    object.put("amount",fAmount);
                     checkout.open(bill.this,object);
                 } catch (JSONException e) {
                     e.printStackTrace();
