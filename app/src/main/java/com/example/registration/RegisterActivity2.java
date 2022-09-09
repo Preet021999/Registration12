@@ -105,7 +105,7 @@ public class RegisterActivity2 extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(b){
                     builder.setTitle("Terms And Conditions");
-                    builder.setMessage("This is Your Description");
+                    builder.setMessage("You agree to your data being collected and stored.");
 
                     builder.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
                         @Override
