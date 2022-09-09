@@ -134,7 +134,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(email.equals(dri_email.get(i)) && password.equals(dri_pass.get(i))){
                     editor.putString("isLogin","true");
                     editor.commit();
-                    openDash();
+                    openDash1();
                 }
 
             }
@@ -144,6 +144,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void openDash() {
+
+        startActivity(new Intent(LoginActivity.this,customer_home.class));
+        finish();
+
+    }
+    private void openDash1() {
 
         startActivity(new Intent(LoginActivity.this,driver_home.class));
         finish();
