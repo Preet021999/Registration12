@@ -116,8 +116,8 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                                 Log.d(TAG, document.getId() + " => " + document.getData());
                                 cus_name.add(document.getString("Name"));
                                 //cus_pass.add(document.getString("Password"));
-                                System.out.println(cus_email);
-                                System.out.println(cus_pass);
+//                                System.out.println(cus_email);
+//                                System.out.println(cus_pass);
 //                         for (int i=0;i<cus_email.size();i++){
 //                             System.out.println(cus_email.get(i));
 //                         }
