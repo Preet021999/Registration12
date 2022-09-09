@@ -37,7 +37,8 @@ public class LoginActivity extends AppCompatActivity {
     String email,password;
      ArrayList<String> cus_email=new ArrayList<String>();
      ArrayList<String> cus_pass=new ArrayList<String>();
-    String dri_email,dri_pass;
+    ArrayList<String> dri_email= new ArrayList<String>();
+    ArrayList<String> dri_pass= new ArrayList<String>();
     FirebaseFirestore db;
     private static final String TAG = "MainActivity";
     private SharedPreferences sharedPreferences;
@@ -51,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         db = FirebaseFirestore.getInstance();
         getuserDocs();
+        getdriverDocs();
         System.out.println(cus_email);
         System.out.println(cus_pass);
         sharedPreferences = this.getSharedPreferences("login",MODE_PRIVATE);
@@ -127,7 +129,15 @@ public class LoginActivity extends AppCompatActivity {
 
 
             }
+            for (int i=0;i<dri_email.size();i++)
+            {
+                if(email.equals(dri_email.get(i)) && password.equals(dri_pass.get(i))){
+                    editor.putString("isLogin","true");
+                    editor.commit();
+                    openDash();
+                }
 
+            }
 
         }
 
@@ -152,9 +162,9 @@ public void getuserDocs(){
                          cus_pass.add(document.getString("Password"));
                          System.out.println(cus_email);
                          System.out.println(cus_pass);
-                         for (int i=0;i<cus_email.size();i++){
-                             System.out.println(cus_email.get(i));
-                         }
+//                         for (int i=0;i<cus_email.size();i++){
+//                             System.out.println(cus_email.get(i));
+//                         }
 
                     }
                 } else {
@@ -164,5 +174,30 @@ public void getuserDocs(){
         });
 
 }
+    public void getdriverDocs(){
+        db.collection("driver")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d(TAG, document.getId() + " => " + document.getData());
+                                dri_email.add(document.getString("Email"));
+                                dri_pass.add(document.getString("Password"));
+                                System.out.println(dri_email);
+                                System.out.println(dri_pass);
+//                                for (int i=0;i<cus_email.size();i++){
+//                                    System.out.println(cus_email.get(i));
+//                                }
+
+                            }
+                        } else {
+                            Log.d(TAG, "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+
+    }
 
 }
