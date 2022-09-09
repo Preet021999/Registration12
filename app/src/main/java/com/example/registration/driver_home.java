@@ -66,6 +66,7 @@ public class driver_home extends AppCompatActivity {
 
        btnLogout=findViewById(R.id.BtnDriver_logout);
        next=findViewById(R.id.next);
+       accept=findViewById(R.id.accept);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

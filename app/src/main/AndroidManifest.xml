@@ -36,6 +36,9 @@
             android:name=".driver_home"
             android:exported="false" />
         <activity
+            android:name=".bid"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity2"
             android:exported="false" />
         <activity android:name=".RegisterActivity" />
