@@ -43,6 +43,8 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
+        getuserDocs();
+        getdriverDocs();
         db = FirebaseFirestore.getInstance();
          database = FirebaseDatabase.getInstance();
          myRef = database.getReference("bid");
