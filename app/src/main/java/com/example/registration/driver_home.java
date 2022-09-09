@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class driver_home extends AppCompatActivity {
 
     TextView dest,height,width,del_price,name;
-    Button btnLogout,next;
+    Button btnLogout,next,accept;
     private int index=0;
 
     private SharedPreferences sharedPreferences;
@@ -120,6 +120,15 @@ public class driver_home extends AppCompatActivity {
                                         name.setText("Name: "+obj_name.get(index));
                                         del_price.setText("Price: "+obj_price.get(index));
                                         width.setText("Width: "+obj_width.get(index));
+                                    }
+                                });
+                                accept.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Intent intent=new Intent(driver_home.this,bid.class);
+                                        intent.putExtra("name",obj_name.get(index));
+                                        intent.putExtra("price",obj_price.get(index));
+                                        startActivity(intent);
                                     }
                                 });
 

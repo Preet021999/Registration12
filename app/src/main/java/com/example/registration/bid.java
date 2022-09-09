@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class bid extends AppCompatActivity {
 
     TextView C_bid;
@@ -24,6 +27,10 @@ public class bid extends AppCompatActivity {
         Amount = findViewById(R.id.Amount);
         Exit = findViewById(R.id.exit);
         E_Amount = findViewById(R.id.Enter_amount);
+        Intent intent=getIntent();
+        String name= intent.getStringExtra("name");
+        String price= intent.getStringExtra("price");
+        C_bid.setText(price+"  ₹");
 
         Exit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +44,7 @@ public class bid extends AppCompatActivity {
             public void onClick(View view) {
                 String amount=Amount.getText().toString();
                 C_bid.setText(amount+"  ₹");
+
             }
         });
     }
