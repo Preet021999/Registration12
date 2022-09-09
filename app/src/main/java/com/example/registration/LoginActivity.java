@@ -105,23 +105,32 @@ public class LoginActivity extends AppCompatActivity {
     private void validateData() {
         email = uname.getText().toString();
         password = pass.getText().toString();
+        System.out.println(email);
+        System.out.println(password);
 
         if(email.isEmpty()){
             uname.setError("Please Fill this Filed");
             uname.requestFocus();
         }
-        if(password.isEmpty()){
+        else if(password.isEmpty()){
             pass.setError("Please Fill this Filed");
             pass.requestFocus();
         }
-        else if(email.equals("abc") && password.equals("abc")){
-            editor.putString("isLogin","true");
-            editor.commit();
-            openDash();
-        }
         else {
-            Toast.makeText(this,"Id & PassWord is Incorrect",Toast.LENGTH_SHORT);
+            for (int i=0;i<cus_email.size();i++)
+            {
+                if(email.equals(cus_email.get(i)) && password.equals(cus_pass.get(i))){
+                    editor.putString("isLogin","true");
+                    editor.commit();
+                    openDash();
+                }
+
+
+            }
+
+
         }
+
     }
 
     private void openDash() {
@@ -143,6 +152,9 @@ public void getuserDocs(){
                          cus_pass.add(document.getString("Password"));
                          System.out.println(cus_email);
                          System.out.println(cus_pass);
+                         for (int i=0;i<cus_email.size();i++){
+                             System.out.println(cus_email.get(i));
+                         }
 
                     }
                 } else {
