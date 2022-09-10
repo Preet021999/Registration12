@@ -124,18 +124,33 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="Dont have an Account?"
             android:textColor="@color/colorWhite" />
 
-        <TextView
-            android:id="@+id/textViewSignUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SignUp"
-            android:textColor="@color/colorRed" />
-
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtsignupdriver"
+        android:layout_width="113dp"
+        android:layout_height="30dp"
+        android:text="SignUp for driver"
+        android:textColor="@color/colorRed"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="581dp"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="136dp"
+        android:layout_height="30dp"
+        android:text="SignUp for customer"
+        android:textColor="@color/colorRed"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="581dp"
+        tools:ignore="MissingConstraints"
+        android:textSize="15dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

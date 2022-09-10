@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
     Button btnLogin;
     CheckBox checkBox;
+    TextView r2page,rPage;
 
     String email,password;
      ArrayList<String> cus_email=new ArrayList<String>();
@@ -62,7 +63,8 @@ public class LoginActivity extends AppCompatActivity {
 //            openDash();
 //        }
 
-        TextView rPage=findViewById(R.id.textViewSignUp);
+        rPage=findViewById(R.id.textViewSignUp);
+        r2page = findViewById(R.id.txtsignupdriver);
          uname=findViewById(R.id.inputEmail);
          pass=findViewById(R.id.inputPassword);
         btnLogin=findViewById(R.id.btnlogin);
@@ -99,6 +101,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+            }
+        });
+
+        r2page.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,RegisterActivity2.class));
             }
         });
 
