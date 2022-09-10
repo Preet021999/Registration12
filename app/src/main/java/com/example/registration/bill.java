@@ -48,15 +48,24 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
+        db = FirebaseFirestore.getInstance();
         getuserDocs();
         getdriverDocs();
         getorderDocs();
-        db = FirebaseFirestore.getInstance();
+
          database = FirebaseDatabase.getInstance();
          myRef = database.getReference("bid");
         billpay = findViewById(R.id.btpay);
         txtprice=findViewById(R.id.txtprice);
         txtname=findViewById(R.id.txtname);
+        txtsource=findViewById(R.id.txtsource);
+        txtdest=findViewById(R.id.txtdest);
+        txtpname=findViewById(R.id.txtpname);
+        txtdname=findViewById(R.id.txtdname);
+        txtdname=findViewById(R.id.txtdname);
+        txtdnum=findViewById(R.id.txtdnum);
+        txtemail=findViewById(R.id.txtemail);
+
 
 //        String sAmount = "100000";
         myRef.addValueEventListener(new ValueEventListener() {
@@ -132,6 +141,7 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
 //                         for (int i=0;i<cus_email.size();i++){
 //                             System.out.println(cus_email.get(i));
 //                         }
+                                // Display data
                             txtname.setText(cus_name.get(0));
                             }
                         } else {

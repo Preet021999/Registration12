@@ -133,24 +133,30 @@
     <TextView
         android:id="@+id/txtsignupdriver"
         android:layout_width="113dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="72dp"
         android:text="SignUp for driver"
         android:textColor="@color/colorRed"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="581dp"
         android:textSize="15dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textViewSignUp"
         android:layout_width="136dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="44dp"
         android:text="SignUp for customer"
+        android:gravity="center"
         android:textColor="@color/colorRed"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="581dp"
-        tools:ignore="MissingConstraints"
-        android:textSize="15dp"/>
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

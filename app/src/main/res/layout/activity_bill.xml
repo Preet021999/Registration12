@@ -37,6 +37,9 @@
         <TextView
             android:id="@+id/txtname"
             android:layout_width="200dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:gravity="center"
             android:layout_height="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,8 +51,11 @@
         <TextView
             android:id="@+id/txtpname"
             android:layout_width="190dp"
+            android:textSize="20dp"
             android:layout_height="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.955"
             app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +66,10 @@
             android:id="@+id/txtsource"
             android:layout_width="200dp"
             android:layout_height="30dp"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
@@ -71,18 +80,23 @@
             android:id="@+id/txtdest"
             android:layout_width="200dp"
             android:layout_height="30dp"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
             app:layout_constraintVertical_bias="0.353" />
 
         <TextView
             android:id="@+id/txtprice"
             android:layout_width="200dp"
             android:layout_height="30dp"
+
             android:textSize="20dp"
+            android:gravity="center"
             android:textColor="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -175,11 +189,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.466"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.813">
 
             <TextView
+                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Driver Details  :"
@@ -194,8 +211,9 @@
             </TextView>
 
             <TextView
+                android:id="@+id/textView10"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="31dp"
                 android:text="Driver Name  :"
                 android:textColor="#fff"
                 android:textSize="22dp"
@@ -209,8 +227,9 @@
             </TextView>
 
             <TextView
+                android:id="@+id/textView12"
                 android:layout_width="129dp"
-                android:layout_height="34dp"
+                android:layout_height="31dp"
                 android:text="Number:"
                 android:textColor="#fff"
                 android:textSize="22dp"
@@ -224,8 +243,9 @@
             </TextView>
 
             <TextView
+                android:id="@+id/textView13"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="31dp"
                 android:text="Email Id  :"
                 android:textColor="#fff"
                 android:textSize="22dp"
@@ -241,26 +261,41 @@
             <TextView
                 android:id="@+id/txtdname"
                 android:layout_width="166dp"
-                android:layout_height="37dp"
-                tools:layout_editor_absoluteX="171dp"
-                tools:layout_editor_absoluteY="106dp"
+                android:textSize="20dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
                 tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/txtdnum"
                 android:layout_width="166dp"
-                android:layout_height="36dp"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="170dp"
-                tools:layout_editor_absoluteY="159dp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_height="31dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="88dp"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/txtemail"
                 android:layout_width="166dp"
-                android:layout_height="37dp"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="170dp"
-                tools:layout_editor_absoluteY="209dp" />
+                android:layout_height="31dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="132dp"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
