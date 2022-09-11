@@ -27,6 +27,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
+import es.dmoral.toasty.Toasty;
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText uname,pass;
@@ -135,6 +137,9 @@ public class LoginActivity extends AppCompatActivity {
                     editor.commit();
                     openDash();
                 }
+                else {
+                    Toasty.error(LoginActivity.this,"Incorrect login details",Toast.LENGTH_SHORT,true).show();
+                }
 
 
             }
@@ -144,6 +149,9 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("isLogin","true");
                     editor.commit();
                     openDash1();
+                }
+                else{
+                    Toasty.error(LoginActivity.this,"Incorrect login details",Toast.LENGTH_SHORT,true).show();
                 }
 
             }
