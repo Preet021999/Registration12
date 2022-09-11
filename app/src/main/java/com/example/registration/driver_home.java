@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class driver_home extends AppCompatActivity {
 
     TextView dest,height,width,del_price,name;
-    Button btnLogout,accept;
+    Button btnLogout,accept,reject;
 
 
     private SharedPreferences sharedPreferences;
@@ -67,6 +67,7 @@ public class driver_home extends AppCompatActivity {
        btnLogout=findViewById(R.id.BtnDriver_logout);
 
        accept=findViewById(R.id.accept);
+       reject=findViewById(R.id.reject);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,6 +77,18 @@ public class driver_home extends AppCompatActivity {
                 openLogin();
 
 
+            }
+        });
+        reject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dest.setVisibility(View.GONE);
+                height.setVisibility(View.GONE);
+                width.setVisibility(View.GONE);
+                del_price.setVisibility(View.GONE);
+                name.setVisibility(View.GONE);
+                accept.setVisibility(View.GONE);
+                reject.setVisibility(View.GONE);
             }
         });
     }
