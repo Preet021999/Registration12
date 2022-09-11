@@ -135,7 +135,9 @@ public class LoginActivity extends AppCompatActivity {
                     editor.commit();
                     openDash();
                 }
-
+                else{
+                    Toast.makeText(LoginActivity.this, "Wrong Login Details", Toast.LENGTH_SHORT).show();
+                }
 
             }
             for (int i=0;i<dri_email.size();i++)
@@ -145,7 +147,9 @@ public class LoginActivity extends AppCompatActivity {
                     editor.commit();
                     openDash1();
                 }
-
+                else{
+                    Toast.makeText(LoginActivity.this, "Wrong Login Details", Toast.LENGTH_SHORT).show();
+                }
             }
 
         }
