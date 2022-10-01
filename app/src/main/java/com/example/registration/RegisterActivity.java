@@ -27,10 +27,10 @@ import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private CheckBox checkBox,checkBox2;
+    private CheckBox checkBox, checkBox2;
 
 
-    EditText UserName,PhoneNumber,Address,Email,Password,C_Password;
+    EditText UserName, PhoneNumber, Address, Email, Password, C_Password;
 
     FirebaseFirestore db;
     TextView back;
@@ -38,8 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
     Button btn_reg;
     AlertDialog.Builder builder;
 
-    String uname,phone,address,email,pass,c_pass;
-
+    String uname, phone, address, email, pass, c_pass;
 
 
     @Override
@@ -47,33 +46,33 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-      //REGISTER - ALREADY HAVE ACC - DRIVER REGISTRATION  CLICKS
+        //REGISTER - ALREADY HAVE ACC - DRIVER REGISTRATION  CLICKS
 
-       UserName = findViewById(R.id.inputUsername);
-       PhoneNumber = findViewById(R.id.inputPhone);
-       Address = findViewById(R.id.inputAddress);
-       Email = findViewById(R.id.inputEmail);
+        UserName = findViewById(R.id.inputUsername);
+        PhoneNumber = findViewById(R.id.inputPhone);
+        Address = findViewById(R.id.inputAddress);
+        Email = findViewById(R.id.inputEmail);
 
         db = FirebaseFirestore.getInstance();
 
-       Password = findViewById(R.id.inputPassword);
-       C_Password = findViewById(R.id.inputConformPassword);
+        Password = findViewById(R.id.inputPassword);
+        C_Password = findViewById(R.id.inputConformPassword);
 
-        back=findViewById(R.id.alreadyHaveAccount);
-        btn_driver=findViewById(R.id.r_driver);
+        back = findViewById(R.id.alreadyHaveAccount);
+        btn_driver = findViewById(R.id.r_driver);
         btn_reg = findViewById(R.id.c_btnRegister);
 
         back.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
         btn_driver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RegisterActivity.this,RegisterActivity2.class));
+                startActivity(new Intent(RegisterActivity.this, RegisterActivity2.class));
             }
         });
 
@@ -98,7 +97,7 @@ public class RegisterActivity extends AppCompatActivity {
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b){
+                if (b) {
                     builder.setTitle("Terms And Conditions");
                     builder.setMessage("This is Your Description");
 
@@ -117,7 +116,7 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     });
                     builder.show();
-                }else {
+                } else {
                     btn_reg.setEnabled(false);
                 }
             }
@@ -128,11 +127,10 @@ public class RegisterActivity extends AppCompatActivity {
         checkBox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b)
-                {
+                if (b) {
                     Password.setTransformationMethod(null);
                     C_Password.setTransformationMethod(null);
-                }else{
+                } else {
                     Password.setTransformationMethod(new PasswordTransformationMethod());
                     C_Password.setTransformationMethod(new PasswordTransformationMethod());
                 }
@@ -144,47 +142,45 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-
     private void validation() {
         /** Database connection **/
-     String uname = UserName.getText().toString();
+        String uname = UserName.getText().toString();
         String phone = PhoneNumber.getText().toString();
         String address = Address.getText().toString();
         String email = Email.getText().toString();
         String pass = Password.getText().toString();
-        String c_pass= C_Password.getText().toString();
+        String c_pass = C_Password.getText().toString();
 
-        if (uname.isEmpty()){
+        if (uname.isEmpty()) {
             UserName.setError("Please Fill this Filed");
             UserName.requestFocus();
         }
-        if (phone.isEmpty()){
+        if (phone.isEmpty()) {
             PhoneNumber.setError("Please Fill this Filed");
             PhoneNumber.requestFocus();
         }
-        if (address.isEmpty()){
+        if (address.isEmpty()) {
             Address.setError("Please Fill this Filed");
             Address.requestFocus();
         }
-        if (email.isEmpty()){
+        if (email.isEmpty()) {
             Email.setError("Please Fill this Filed");
             Email.requestFocus();
         }
-        if (pass.isEmpty()){
+        if (pass.isEmpty()) {
             Password.setError("Please Fill this Filed");
             Password.requestFocus();
         }
-        if (c_pass.isEmpty()){
+        if (c_pass.isEmpty()) {
             C_Password.setError("Please Fill this Filed");
             C_Password.requestFocus();
-        }
-        else {
-            Map<String,Object> user = new HashMap<>();
-            user.put("Name",uname);
-            user.put("Phone Number",phone);
-            user.put("Address",address);
-            user.put("Email",email);
-            user.put("Password",pass);
+        } else {
+            Map<String, Object> user = new HashMap<>();
+            user.put("Name", uname);
+            user.put("Phone Number", phone);
+            user.put("Address", address);
+            user.put("Email", email);
+            user.put("Password", pass);
 //            user.put("Confirm Password",c_pass);
             db.collection("user")
                     .add(user)
@@ -199,7 +195,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                         }
                     });
-            startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
         }
     }
 }
