@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".driver_home"
     android:orientation="vertical"
-    >
+    tools:context=".driver_home">
 
     <TextView
         android:id="@+id/textView9"
@@ -24,86 +23,87 @@
 
 
     <TextView
+        android:id="@+id/dest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="@drawable/txt_back"
+        android:gravity="center"
+        android:text="Destination"
+        android:textColor="@color/colorWhite"
         android:textSize="30dp"
         android:visibility="visible"
-        android:id="@+id/dest"
-        android:text="Destination"
-        android:gravity="center"
-        android:textColor="@color/colorWhite"
-        android:background="@drawable/txt_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.0"></TextView>
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:id="@+id/width"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:textSize="30dp"
-        android:id="@+id/width"
-        android:text="Width"
-        android:visibility="visible"
         android:background="@drawable/txt_back"
         android:gravity="center"
+        android:text="Width"
         android:textColor="@color/colorWhite"
+        android:textSize="30dp"
+        android:visibility="visible"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/del_price"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/del_price" />
 
     <TextView
+        android:id="@+id/del_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@drawable/txt_back"
+        android:gravity="center"
+        android:text="Price"
+        android:textColor="@color/colorWhite"
         android:textSize="30dp"
         android:visibility="visible"
-        android:id="@+id/del_price"
-        android:text="Price"
-        android:gravity="center"
-        android:background="@drawable/txt_back"
-        android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:visibility="visible"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:textColor="@color/colorWhite"
-        android:text="Height"
-        android:background="@drawable/txt_back"
         android:id="@+id/height"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dest"></TextView>
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:visibility="visible"
-        android:textSize="30dp"
-        android:id="@+id/name"
-        android:text="Name"
-        android:gravity="center"
         android:background="@drawable/txt_back"
+        android:gravity="center"
+        android:text="Height"
         android:textColor="@color/colorWhite"
+        android:textSize="30dp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/height"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/dest" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/txt_back"
+        android:gravity="center"
+        android:text="Name"
+        android:textColor="@color/colorWhite"
+        android:textSize="30dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height" />
+
     <Button
         android:id="@+id/BtnDriver_logout"
         android:layout_width="387dp"
