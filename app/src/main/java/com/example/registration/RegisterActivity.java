@@ -184,8 +184,8 @@ public class RegisterActivity extends AppCompatActivity {
             user.put("Phone Number",phone);
             user.put("Address",address);
             user.put("Email",email);
-//            user.put("Password",pass);
-           // user.put("Confirm Password",c_pass);
+            user.put("Password",pass);
+//            user.put("Confirm Password",c_pass);
             db.collection("user")
                     .add(user)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
