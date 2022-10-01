@@ -138,7 +138,7 @@ public class LoginActivity extends AppCompatActivity {
                     openDash();
                 }
                 else {
-                    Toasty.error(LoginActivity.this,"Incorrect login details",Toast.LENGTH_SHORT,true).show();
+//                    Toasty.error(LoginActivity.this,"Incorrect login details",Toast.LENGTH_SHORT,true).show();
                 }
 
 
@@ -151,7 +151,7 @@ public class LoginActivity extends AppCompatActivity {
                     openDash1();
                 }
                 else{
-                    Toasty.error(LoginActivity.this,"Incorrect login details",Toast.LENGTH_SHORT,true).show();
+//                    Toasty.error(LoginActivity.this,"Incorrect login details",Toast.LENGTH_SHORT,true).show();
                 }
 
             }
