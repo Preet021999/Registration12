@@ -29,23 +29,23 @@
         android:hint="Enter Km Of Transport"
         android:padding="12dp"
         android:textSize="20dp"
-        android:textColorHint="#90000000"/>
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <TextView
         android:id="@+id/edtrps"
         android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:background="@drawable/txt_back"
-        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:gravity="center"
         android:padding="12dp"
-        android:gravity="center_horizontal"
         android:text="80.00 Rupees per KM"
-        android:textColor="@color/colorBlack"
-        android:textSize="20dp"/>
+        android:textColor="#000"
+        android:textSize="16dp" />
 
     <Button
         android:id="@+id/btnprice"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="60dp"
         android:background="@drawable/txt_back"
         android:layout_marginTop="30dp"
@@ -58,21 +58,22 @@
         android:id="@+id/txtdis"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/txt_back"
         android:gravity="center"
         android:padding="12dp"
-        android:textColor="@color/colorBlack"
+        android:textColor="#fff"
         android:textSize="20dp" />
 
     <Button
-        android:layout_width="300dp"
+        android:layout_width="60dp"
         android:layout_height="60dp"
         android:id="@+id/btnback"
         android:textColor="@color/colorWhite"
-        android:background="@drawable/txt_back"
-        android:layout_marginTop="50dp"
-        android:text="Back to customer page"
+        android:background="@drawable/bb1"
+        android:layout_marginTop="180dp"
+        android:textStyle="bold"
         android:textSize="20dp"
         android:padding="12dp"/>
+
 </LinearLayout>

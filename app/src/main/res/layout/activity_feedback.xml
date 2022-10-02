@@ -28,10 +28,12 @@
         android:background="@drawable/txt_back"
         android:hint="Driver Name"
         android:padding="12dp"
+        android:gravity="center"
+
         android:textColor="@color/colorBlack"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:textColorHint="@color/colorBlack" />
+        android:textColorHint="#fff" />
 
     <RatingBar
         android:id="@+id/et_ratingBar"
@@ -53,18 +55,32 @@
         android:layout_marginRight="25dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/txt_back"
+        android:paddingLeft="15dp"
         android:hint="Enter Your Feedback"
-        android:textColorHint="@color/colorBlack"
-        android:padding="12dp"
+        android:textColorHint="#fff"
+        android:textStyle="bold"
+        android:padding="15dp"
         android:lines="6" />
 
     <Button
         android:id="@+id/btnsbf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Submit Your Feedback"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="25dp"
+        android:layout_marginTop="80dp"
         android:layout_marginRight="25dp"
-        android:layout_marginTop="150dp"
-        android:background="@drawable/txt_back"/>
+        android:background="@drawable/txt_back"
+        android:text="Submit"
+        android:textColor="#fff" />
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bb1"
+        android:padding="12dp"
+
+        android:layout_marginTop="80dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 </LinearLayout>

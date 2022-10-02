@@ -3,6 +3,8 @@ package com.example.registration;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,7 +31,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class bill extends AppCompatActivity implements PaymentResultListener {
-    Button billpay;
+    Button billpay,btnb;
     TextView txtprice,txtname,txtpname,txtsource,txtdest,txtdname,txtdnum,txtemail;
    private int fAmount;
     String sAmount;
@@ -52,7 +54,7 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
         getuserDocs();
         getdriverDocs();
         getorderDocs();
-
+        btnb = findViewById(R.id.btnback);
          database = FirebaseDatabase.getInstance();
          myRef = database.getReference("bid");
         billpay = findViewById(R.id.btpay);
@@ -66,7 +68,12 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
         txtdnum=findViewById(R.id.txtdnum);
         txtemail=findViewById(R.id.txtemail);
 
-
+        btnb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(bill.this,customer_home.class));
+            }
+        });
 //        String sAmount = "100000";
         myRef.addValueEventListener(new ValueEventListener() {
             @Override

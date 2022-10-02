@@ -105,7 +105,13 @@ public class RegisterActivity2 extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(b){
                     builder.setTitle("Terms And Conditions");
-                    builder.setMessage("You agree to your data being collected and stored.");
+                    builder.setMessage("Each registration is for a single user only. On registration, you will choose a user name and password (\"ID\"). You are not allowed to share your ID or give access to your account to anyone else. \n" +
+                            "\n" +
+                            "Shipping Wars will only be responsible for 10 % of your payment which is the reasonably foreseeable result of Shipping wars breach of a legal to provided service to you.\n" +
+                            "\n" +
+                            "These terms and conditions constitute the entire agreement between you and Shipping Wars for your use of the Shipping Wars Application and services from Shipping Wars. They supersede all previous communications, representations and arrangements, either written or oral.\n" +
+                            "\n" +
+                            "All Content created and published on the digital platforms under the mobile application ,its licensors who own all intellectual property rights (including copyright and database rights) No intellectual property rights in any of the content are transferred to you while you consume the content on this platform. \"SW\" is registered trade mark of Shipping Wars and you may not use them without prior written permission from Shipping wars. You are permitted to use the content on this platform only as set out in our Copyright Policy.\n");
 
                     builder.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
                         @Override

@@ -23,7 +23,7 @@ public class feedback extends AppCompatActivity {
 
     EditText et_source,edmulti;
     RatingBar et_ratingbar;
-    Button btnsbf;
+    Button btnsbf,btnback;
     FirebaseFirestore db;
 
     @Override
@@ -34,8 +34,14 @@ public class feedback extends AppCompatActivity {
         edmulti = findViewById(R.id.edmulti);
         et_ratingbar =findViewById(R.id.et_ratingBar);
         btnsbf = findViewById(R.id.btnsbf);
+        btnback = findViewById(R.id.btnback);
         db = FirebaseFirestore.getInstance();
-
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(feedback.this,customer_home.class));
+            }
+        });
         btnsbf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -24,53 +24,126 @@
 
     <Button
         android:id="@+id/btnest"
-        android:layout_width="250dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/txt_back"
-        android:text="Estimate Cost"
+        android:layout_width="133dp"
+        android:layout_height="148dp"
+        android:background="@drawable/bb02"
         android:textColor="#fff"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325" />
 
     <Button
         android:id="@+id/btnop"
-        android:layout_width="250dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/txt_back"
-        android:text="Order Page"
+        android:layout_width="133dp"
+        android:layout_height="148dp"
+        android:background="@drawable/bb05"
         android:textColor="#fff"
         android:textSize="18dp"
 
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.331" />
 
     <Button
         android:id="@+id/btnbill"
-        android:layout_width="250dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/txt_back"
-        android:text="Payment"
+        android:layout_width="133dp"
+        android:layout_height="148dp"
+        android:background="@drawable/bb04"
         android:textColor="#fff"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696" />
 
     <Button
         android:id="@+id/btnfeed"
-        android:layout_width="250dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="50dp"
-        android:text="Feedback"
-        android:background="@drawable/txt_back"
+        android:layout_width="133dp"
+        android:layout_height="148dp"
+        android:background="@drawable/bb03"
         android:textColor="#fff"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.697"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btnlogout"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:layout_marginTop="80dp"
         android:background="@drawable/txt_back"
         android:text="Logout"
-        android:textColor="#fff" />
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93" />
 
-</LinearLayout>
+    <TextView
+        android:layout_width="136dp"
+        android:layout_height="24dp"
+        android:text="Estimate Cost"
+        android:paddingLeft="20dp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="136dp"
+        android:layout_height="24dp"
+        android:paddingLeft="50dp"
+        android:text="Order"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <TextView
+        android:layout_width="136dp"
+        android:layout_height="24dp"
+        android:paddingLeft="38dp"
+        android:text="Feedback"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783" />
+
+    <TextView
+        android:layout_width="136dp"
+        android:layout_height="24dp"
+        android:paddingLeft="38dp"
+        android:text="Payment"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783" />
+</androidx.constraintlayout.widget.ConstraintLayout>

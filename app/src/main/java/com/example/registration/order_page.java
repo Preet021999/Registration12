@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class order_page extends AppCompatActivity {
     EditText edtname,dest,price,height,width;
-    Button btnsub;
+    Button btnsub,btnback;
     FirebaseFirestore db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +33,14 @@ public class order_page extends AppCompatActivity {
         height = findViewById(R.id.height);
         width = findViewById(R.id.width);
         btnsub = findViewById(R.id.btnsub);
+        btnback = findViewById(R.id.btnback);
         db = FirebaseFirestore.getInstance();
-
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(order_page.this,customer_home.class));
+            }
+        });
         btnsub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

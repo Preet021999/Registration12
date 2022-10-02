@@ -14,6 +14,7 @@ public class estimatecost extends AppCompatActivity {
     TextView txtdis,edtrps;
     Button btnprice,btnback;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,8 @@ public class estimatecost extends AppCompatActivity {
         btnprice = findViewById(R.id.btnprice);
         btnback =findViewById(R.id.btnback);
 
+        txtdis.setVisibility(View.GONE);
+
         btnprice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,7 +36,7 @@ public class estimatecost extends AppCompatActivity {
 
                 Float v1 = Float.valueOf(edtkm.getText().toString());
 //                Float v2 = Float.valueOf(edtrps.getText().toString());
-
+                txtdis.setVisibility(View.VISIBLE);
                 Float btnprice = v1*80;
                 txtdis.setText(String.valueOf(btnprice));
             }
