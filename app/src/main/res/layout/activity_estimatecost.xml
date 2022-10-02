@@ -22,8 +22,8 @@
 
     <EditText
         android:id="@+id/edtkm"
-        android:layout_width="387dp"
-        android:layout_height="61dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:background="@drawable/txt_back"
         android:layout_marginTop="100dp"
         android:hint="Enter Km Of Transport"
@@ -33,20 +33,20 @@
 
     <TextView
         android:id="@+id/edtrps"
-        android:layout_width="387dp"
-        android:layout_height="61dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:background="@drawable/txt_back"
         android:layout_marginTop="20dp"
         android:padding="12dp"
-        android:gravity="center_horizontal|center_vertical "
+        android:gravity="center_horizontal"
         android:text="80.00 Rupees per KM"
         android:textColor="@color/colorBlack"
         android:textSize="20dp"/>
 
     <Button
         android:id="@+id/btnprice"
-        android:layout_width="387dp"
-        android:layout_height="61dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:background="@drawable/txt_back"
         android:layout_marginTop="30dp"
         android:padding="12dp"
@@ -56,18 +56,18 @@
 
     <TextView
         android:id="@+id/txtdis"
-        android:layout_width="387dp"
-        android:layout_height="61dp"
-        android:textSize="20dp"
-        android:gravity="center"
-        android:background="@drawable/txt_back"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:layout_marginTop="50dp"
+        android:background="@drawable/txt_back"
+        android:gravity="center"
+        android:padding="12dp"
         android:textColor="@color/colorBlack"
-        android:padding="12dp"/>
+        android:textSize="20dp" />
 
     <Button
-        android:layout_width="387dp"
-        android:layout_height="61dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:id="@+id/btnback"
         android:textColor="@color/colorWhite"
         android:background="@drawable/txt_back"

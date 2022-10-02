@@ -133,22 +133,7 @@
         app:layout_constraintStart_toStartOf="@+id/inputPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
-    <CheckBox
-        android:id="@+id/Spass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Password"
-        android:textColor="@color/colorWhite"
-        android:textSize="15dp"
-        android:theme="@style/colored_checkbox"
-        app:layout_constraintBottom_toTopOf="@+id/add"
-        app:layout_constraintEnd_toEndOf="@+id/inputConformPassword"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintStart_toStartOf="@+id/inputConformPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputConformPassword"
-        app:layout_constraintVertical_bias="0.285" />
-
-<!--    <Button-->
+    <!--    <Button-->
 <!--        android:id="@+id/add"-->
 <!--        android:layout_width="210dp"-->
 <!--        android:layout_height="wrap_content"-->
@@ -161,6 +146,22 @@
 <!--        app:layout_constraintHorizontal_bias="0.489"-->
 <!--        app:layout_constraintStart_toStartOf="@+id/inputConformPassword"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/inputConformPassword" />-->
+
+    <CheckBox
+        android:id="@+id/Spass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Show Password"
+        android:textColor="@color/colorWhite"
+        android:textSize="15dp"
+        android:theme="@style/colored_checkbox"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="@+id/inputConformPassword"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="@+id/inputConformPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputConformPassword"
+        app:layout_constraintVertical_bias="0.285" />
 
     <CheckBox
         android:id="@+id/terms1"

@@ -135,13 +135,6 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                                 cus_name.add(document.getString("Name"));
                                 source.add(document.getString("Address"));
                                 txtsource.setText(source.get(0));
-                                //cus_pass.add(document.getString("Password"));
-//                                System.out.println(cus_email);
-//                                System.out.println(cus_pass);
-//                         for (int i=0;i<cus_email.size();i++){
-//                             System.out.println(cus_email.get(i));
-//                         }
-                                // Display data
                             txtname.setText(cus_name.get(0));
                             }
                         } else {
@@ -163,12 +156,6 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                                 dri_name.add(document.getString("Name"));
                                 dri_num.add(document.getString("Phone Number"));
                                 dri_email.add(document.getString("Email"));
-//                                dri_pass.add(document.getString("Password"));
-//                                System.out.println(dri_name);
-//                                System.out.println(dri_pass);
-//                                for (int i=0;i<cus_email.size();i++){
-//                                    System.out.println(cus_email.get(i));
-//                                }
                                 txtdname.setText(dri_name.get(0));
                                 txtdnum.setText(dri_num.get(0));
                                 txtemail.setText(dri_email.get(0));
@@ -193,13 +180,6 @@ public class bill extends AppCompatActivity implements PaymentResultListener {
                                     dest.add(document.getString("Destination"));
                                     txtpname.setText(pro_name.get(0));
                                     txtdest.setText(dest.get(0));
-//                                dri_pass.add(document.getString("Password"));
-//                                System.out.println(dri_name);
-//                                System.out.println(dri_pass);
-//                                for (int i=0;i<cus_email.size();i++){
-//                                    System.out.println(cus_email.get(i));
-//                                }
-
                                 }
                             } else {
                                 Log.d(TAG, "Error getting documents: ", task.getException());

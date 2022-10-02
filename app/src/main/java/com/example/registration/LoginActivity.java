@@ -27,7 +27,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-import es.dmoral.toasty.Toasty;
+
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
     Button btnLogin;
     CheckBox checkBox;
-    TextView r2page,rPage;
+    TextView signin;
 
     String email,password;
      ArrayList<String> cus_email=new ArrayList<String>();
@@ -64,9 +64,8 @@ public class LoginActivity extends AppCompatActivity {
 //        if(sharedPreferences.getString("isLogin","false").equals("true")){
 //            openDash();
 //        }
+        signin = findViewById(R.id.signin);
 
-        rPage=findViewById(R.id.textViewSignUp);
-        r2page = findViewById(R.id.txtsignupdriver);
          uname=findViewById(R.id.inputEmail);
          pass=findViewById(R.id.inputPassword);
         btnLogin=findViewById(R.id.btnlogin);
@@ -98,20 +97,13 @@ public class LoginActivity extends AppCompatActivity {
                 validateData();
             }
         });
-
-        rPage.setOnClickListener(new View.OnClickListener() {
+        signin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
             }
         });
 
-        r2page.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,RegisterActivity2.class));
-            }
-        });
 
     }
 

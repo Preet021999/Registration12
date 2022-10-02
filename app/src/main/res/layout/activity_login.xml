@@ -123,40 +123,13 @@
         app:layout_constraintTop_toBottomOf="@+id/btnlogin">
 
         <TextView
+            android:id="@+id/signin"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Dont have an Account?"
             android:textColor="@color/colorWhite" />
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/txtsignupdriver"
-        android:layout_width="113dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="72dp"
-        android:text="SignUp for driver"
-        android:textColor="@color/colorRed"
-        android:textSize="15dp"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textViewSignUp"
-        android:layout_width="136dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="44dp"
-        android:text="SignUp for customer"
-        android:gravity="center"
-        android:textColor="@color/colorRed"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
