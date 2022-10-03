@@ -146,18 +146,7 @@ public class driver_home extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        dest.setVisibility(View.GONE);
-        height.setVisibility(View.GONE);
-        width.setVisibility(View.GONE);
-        del_price.setVisibility(View.GONE);
-        name.setVisibility(View.GONE);
-        accept.setVisibility(View.GONE);
-        reject.setVisibility(View.GONE);
 
-    }
 
     @Override
     protected void onStop() {
