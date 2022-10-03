@@ -58,8 +58,14 @@ public class LoginActivity extends AppCompatActivity {
         getdriverDocs();
         System.out.println(cus_email);
         System.out.println(cus_pass);
-        sharedPreferences = this.getSharedPreferences("login",MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("login",MODE_PRIVATE);
         editor = sharedPreferences.edit();
+
+
+// Once the changes have been made,
+// we need to commit to apply those changes made,
+// otherwise, it will throw an error
+
 
 //        if(sharedPreferences.getString("isLogin","false").equals("true")){
 //            openDash();
@@ -126,7 +132,9 @@ public class LoginActivity extends AppCompatActivity {
             {
                 if(email.equals(cus_email.get(i)) && password.equals(cus_pass.get(i))){
                     editor.putString("isLogin","true");
-                    editor.commit();
+                    editor.putString("email",email);
+                    editor.putString("pass", password);
+                    editor.apply();
                     openDash();
                 }
                 else {
@@ -139,7 +147,9 @@ public class LoginActivity extends AppCompatActivity {
             {
                 if(email.equals(dri_email.get(i)) && password.equals(dri_pass.get(i))){
                     editor.putString("isLogin","true");
-                    editor.commit();
+                    editor.putString("email",email);
+                    editor.putString("pass", password);
+                    editor.apply();
                     openDash1();
                 }
                 else{
